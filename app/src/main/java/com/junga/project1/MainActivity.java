@@ -29,8 +29,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonInfo.setOnClickListener(this);
         buttonBest.setOnClickListener(this);
 
-        Animation animation = AnimationUtils.loadAnimation(MainActivity.this,R.anim.slide_in_half);
-        mainTop.startAnimation(animation);
+        //Set animation
+        Animation slideInRight = AnimationUtils.loadAnimation(MainActivity.this,R.anim.slide_in_half_right);
+        Animation slideInLeft = AnimationUtils.loadAnimation(MainActivity.this,R.anim.slide_in_half_left);
+
+        mainTop.startAnimation(slideInRight);
+        buttonInfo.startAnimation(slideInLeft);
+        buttonBest.startAnimation(slideInLeft);
 
     }
 
@@ -39,9 +44,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(view.getId() == R.id.button_info){
             Intent intent = new Intent(MainActivity.this,DrinksActivity.class);
             startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+            finish();
+
         } else if (view.getId() == R.id.button_best){
             Intent intent = new Intent(MainActivity.this,PlaceActivity.class);
             startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+            finish();
         }
 
     }
