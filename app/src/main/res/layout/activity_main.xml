@@ -1,50 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:andorid="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/grey"
-    >
+    android:weightSum="100">
 
-    <Button
-        android:id="@+id/button_info"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/button_koreandrink"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_top" />
 
-    <Button
-        android:id="@+id/button_best"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/button_bestpub"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_info" />
+    <View
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimaryDark"
+        andorid:layout_constraintBottom_toBottomOf="parent"
+        andorid:layout_constraintEnd_toEndOf="parent"
+        andorid:layout_constraintHorizontal_bias="0.0"
+        andorid:layout_constraintStart_toStartOf="parent"
+        andorid:layout_constraintTop_toTopOf="@+id/guideline3"
+        andorid:layout_constraintVertical_bias="0.0" />
+
 
     <ImageView
         android:id="@+id/main_top"
-        android:layout_width="195dp"
-        android:layout_height="186dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/all_about"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        andorid:layout_constraintBottom_toTopOf="@+id/guideline3"
+        andorid:layout_constraintEnd_toStartOf="@+id/guideline2"
+        andorid:layout_constraintHorizontal_bias="0.0"
+        andorid:layout_constraintStart_toStartOf="@+id/guideline"
+        andorid:layout_constraintTop_toTopOf="parent"
+        andorid:layout_constraintVertical_bias="0.0" />
+
+
+    <Button
+        android:id="@+id/button_info"
+        android:layout_width="0dp"
+        android:layout_height="170dp"
+        android:background="@drawable/button_koreandrink"
+
+        andorid:layout_constraintBottom_toTopOf="@+id/button_best"
+        andorid:layout_constraintEnd_toStartOf="@+id/guideline2"
+        andorid:layout_constraintHorizontal_bias="0.0"
+        andorid:layout_constraintStart_toStartOf="@+id/guideline"
+        andorid:layout_constraintTop_toBottomOf="@+id/main_top" />
+
+    <Button
+        android:id="@+id/button_best"
+        android:layout_width="0dp"
+        android:layout_height="170dp"
+        android:background="@drawable/button_bestpub"
+        andorid:layout_constraintBottom_toBottomOf="parent"
+        andorid:layout_constraintEnd_toStartOf="@+id/guideline2"
+        andorid:layout_constraintHorizontal_bias="0.0"
+        andorid:layout_constraintStart_toStartOf="@+id/guideline"
+        andorid:layout_constraintTop_toBottomOf="@+id/button_info" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        andorid:layout_constraintGuide_percent="0.11" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        andorid:layout_constraintGuide_percent="0.89" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        andorid:layout_constraintGuide_percent="0.31" />
+
+
+
+
 </android.support.constraint.ConstraintLayout>
-</ScrollView>
