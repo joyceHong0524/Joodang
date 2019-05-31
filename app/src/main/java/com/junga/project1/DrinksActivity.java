@@ -8,12 +8,16 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class DrinksActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = "DrinksActivity";
 
     ViewPager viewPager;
+    Button learnMore;
+    TextView goBack;
 
     private CardPagerAdatper mCardAdapter;
     private ShadowTransformer mCardShadowTransformer;
@@ -25,6 +29,11 @@ public class DrinksActivity extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_drinks);
 
         viewPager = (ViewPager) findViewById(R.id.viewPager);
+        learnMore = (Button) findViewById(R.id.button4);
+        goBack = (TextView) findViewById(R.id.go_back);
+
+        learnMore.setOnClickListener(this);
+        goBack.setOnClickListener(this);
 
          mCardAdapter = new CardPagerAdatper();
 
@@ -39,10 +48,21 @@ public class DrinksActivity extends AppCompatActivity implements View.OnClickLis
 
 
 
+
+
     }
 
     @Override
     public void onClick(View view) {
+
+        if (view.getId()==R.id.button4){
+            Intent intent = new Intent(DrinksActivity.this,DrinksInfoActivity.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_up_in,R.anim.slide_up_out);
+        } else if (view.getId() == R.id.go_back){
+            finish();
+        }
+
 
     }
 

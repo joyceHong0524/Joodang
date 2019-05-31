@@ -45,13 +45,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(MainActivity.this,DrinksActivity.class);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
-            finish();
 
         } else if (view.getId() == R.id.button_best){
             Intent intent = new Intent(MainActivity.this,PlaceActivity.class);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
-            finish();
         }
 
     }

@@ -19,7 +19,6 @@ public class DrinksInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drinks_info);
 
-        placeHolder = (Placeholder) findViewById(R.id.placeholder);
         layout= (ConstraintLayout) findViewById(R.id.layout);
 
     }
