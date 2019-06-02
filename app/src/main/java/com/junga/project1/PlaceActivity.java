@@ -53,7 +53,7 @@ public class PlaceActivity extends AppCompatActivity implements View.OnClickList
         top2.setAnimation(animation);
 
 
-        CardPagerAdatper cardPagerAdatper = new CardPagerAdatper(CardPagerAdatper.PLACE_CARD);
+        CardPagerAdatper cardPagerAdatper = new CardPagerAdatper(CardPagerAdatper.PLACE_CARD,this);
         ShadowTransformer shadow = new ShadowTransformer(viewPager,cardPagerAdatper);
         shadow.enableScaling(true);
         viewPager.setPageMargin(30);

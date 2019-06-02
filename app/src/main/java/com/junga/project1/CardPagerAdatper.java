@@ -1,5 +1,7 @@
 package com.junga.project1;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.PagerAdapter;
@@ -18,18 +20,28 @@ public class CardPagerAdatper extends PagerAdapter implements  CardAdapter {
     public final static int DRINK_CARD = 0;
     public final static int PLACE_CARD = 1;
 
+    public final static int SOJU = 0;
+    public final static int CHEONGJU = 1;
+    public final static int MAKGEOLI = 2;
+
+    public final static int HONGDAE = 0;
+    public final static int GANGNAM = 1;
+    public final static int ITAEWON = 2;
+
 
     private List<CardView> mViews;
     private float mBaseElevation;
     private int type; //In this case, it tells if it is from Drinks Activity or Place Activity.
+    private Context context;
 
-    public CardPagerAdatper(int type) {
+    public CardPagerAdatper(int type, Context context) {
         mViews = new ArrayList<>();
 
         for(int i=0; i<3; i++) {
             mViews.add(null);
         }
         this.type = type;
+        this.context = context;
 
     }
     @Override
@@ -84,20 +96,68 @@ public class CardPagerAdatper extends PagerAdapter implements  CardAdapter {
         if(type == DRINK_CARD){
         switch(position){
             case 0: imageView.setImageResource(R.drawable.fragment_soju);
+                    imageView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent intent = new Intent(context,DrinksInfoActivity.class);
+                            intent.putExtra("type",SOJU);
+                            context.startActivity(intent);
+                        }
+                    });
                     break;
             case 1: imageView.setImageResource(R.drawable.fragment_cheongju);
+                imageView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(context,DrinksInfoActivity.class);
+                        intent.putExtra("type",CHEONGJU);
+                        context.startActivity(intent);
+                    }
+                });
                     break;
             case 2: imageView.setImageResource(R.drawable.fragment_makgeoli);
+                imageView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(context,DrinksInfoActivity.class);
+                        intent.putExtra("type",MAKGEOLI);
+                        context.startActivity(intent);
+                    }
+                });
                     break;
             default : break;
             }
         }else if (type == PLACE_CARD){
             switch(position){
                 case 0: imageView.setImageResource(R.drawable.card_hongdae);
+                    imageView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent intent = new Intent(context,PlaceBestActivity.class);
+                            intent.putExtra("type",HONGDAE);
+                            context.startActivity(intent);
+                        }
+                    });
                     break;
                 case 1: imageView.setImageResource(R.drawable.card_gangnam);
+                    imageView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent intent = new Intent(context,PlaceBestActivity.class);
+                            intent.putExtra("type",GANGNAM);
+                            context.startActivity(intent);
+                        }
+                    });
                     break;
                 case 2: imageView.setImageResource(R.drawable.card_itaewon);
+                    imageView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent intent = new Intent(context,PlaceBestActivity.class);
+                            intent.putExtra("type",ITAEWON);
+                            context.startActivity(intent);
+                        }
+                    });
                     break;
                 default : break;
             }

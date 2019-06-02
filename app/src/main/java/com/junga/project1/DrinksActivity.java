@@ -35,7 +35,7 @@ public class DrinksActivity extends AppCompatActivity implements View.OnClickLis
         learnMore.setOnClickListener(this);
         goBack.setOnClickListener(this);
 
-         mCardAdapter = new CardPagerAdatper(CardPagerAdatper.DRINK_CARD);
+         mCardAdapter = new CardPagerAdatper(CardPagerAdatper.DRINK_CARD,this);
 
          mCardShadowTransformer = new ShadowTransformer(viewPager,mCardAdapter);
          mCardShadowTransformer.enableScaling(true);
