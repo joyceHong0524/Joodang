@@ -6,5 +6,13 @@
     <color name="grey">#B7D8D8D8</color>
     <color name="white">#FFFFFF</color>
     <color name="d">#DEFFD4</color>
+    <color name="overlay_start">#05000000</color>
+    <color name="overlay_end">#70090000</color>
+    <color name="black">#000000</color>
+    <color name="top">#1A411B</color>
+    <color name="bottom">#092C0C</color>
+    <color name="blur">#D0242424</color>
+
+
 
 </resources>

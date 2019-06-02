@@ -35,7 +35,7 @@ public class DrinksActivity extends AppCompatActivity implements View.OnClickLis
         learnMore.setOnClickListener(this);
         goBack.setOnClickListener(this);
 
-         mCardAdapter = new CardPagerAdatper();
+         mCardAdapter = new CardPagerAdatper(CardPagerAdatper.DRINK_CARD);
 
          mCardShadowTransformer = new ShadowTransformer(viewPager,mCardAdapter);
          mCardShadowTransformer.enableScaling(true);
@@ -44,12 +44,6 @@ public class DrinksActivity extends AppCompatActivity implements View.OnClickLis
          viewPager.setPageMargin(30);
          viewPager.setAdapter(mCardAdapter);
         Log.d(TAG, "currentItem " + viewPager.getCurrentItem());
-
-
-
-
-
-
     }
 
     @Override

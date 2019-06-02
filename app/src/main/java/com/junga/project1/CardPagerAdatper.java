@@ -15,19 +15,23 @@ import java.util.List;
 
 public class CardPagerAdatper extends PagerAdapter implements  CardAdapter {
 
+    public final static int DRINK_CARD = 0;
+    public final static int PLACE_CARD = 1;
+
+
     private List<CardView> mViews;
     private float mBaseElevation;
+    private int type; //In this case, it tells if it is from Drinks Activity or Place Activity.
 
-    public CardPagerAdatper() {
+    public CardPagerAdatper(int type) {
         mViews = new ArrayList<>();
 
         for(int i=0; i<3; i++) {
             mViews.add(null);
         }
+        this.type = type;
 
     }
-
-
     @Override
     public float getBaseElevation() {
         return mBaseElevation;
@@ -75,6 +79,9 @@ public class CardPagerAdatper extends PagerAdapter implements  CardAdapter {
     private void bind(int position, View view){
         ImageView imageView = (ImageView) view.findViewById(R.id.image);
 
+
+
+        if(type == DRINK_CARD){
         switch(position){
             case 0: imageView.setImageResource(R.drawable.fragment_soju);
                     break;
@@ -83,6 +90,17 @@ public class CardPagerAdatper extends PagerAdapter implements  CardAdapter {
             case 2: imageView.setImageResource(R.drawable.fragment_makgeoli);
                     break;
             default : break;
+            }
+        }else if (type == PLACE_CARD){
+            switch(position){
+                case 0: imageView.setImageResource(R.drawable.card_hongdae);
+                    break;
+                case 1: imageView.setImageResource(R.drawable.card_gangnam);
+                    break;
+                case 2: imageView.setImageResource(R.drawable.card_itaewon);
+                    break;
+                default : break;
+            }
         }
     }
 
