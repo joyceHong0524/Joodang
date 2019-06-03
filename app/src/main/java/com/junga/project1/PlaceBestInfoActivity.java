@@ -1,6 +1,8 @@
 package com.junga.project1;
 
+import android.content.ComponentName;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentManager;
@@ -17,7 +19,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class PlaceBestInfoActivity extends AppCompatActivity implements OnMapReadyCallback {
+public class PlaceBestInfoActivity extends AppCompatActivity implements OnMapReadyCallback, View.OnClickListener {
 
 
     @Override
@@ -30,6 +32,8 @@ public class PlaceBestInfoActivity extends AppCompatActivity implements OnMapRea
 
 
         mapFragment.getMapAsync(this);
+        Button button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(this);
 
     }
 
@@ -43,9 +47,19 @@ public class PlaceBestInfoActivity extends AppCompatActivity implements OnMapRea
         markerOptions.title("Seoul");
         markerOptions.snippet("Capital of Korea");
         googleMap.addMarker(markerOptions);
-
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(SEOUL));
-        googleMap.animateCamera(CameraUpdateFactory.zoomTo(20));
 
+    }
+
+    @Override
+    public void onClick(View view) {
+
+        if (view.getId()==R.id.button){
+            Double myLatitude = 44.433106;
+            Double myLongitude = 26.103687;
+            String labelLocation = "Jorgesys @ Bucharest";
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:<" + myLatitude  + ">,<" + myLongitude + ">?q=<" + myLatitude  + ">,<" + myLongitude + ">(" + labelLocation + ")"));
+            startActivity(intent);
+        }
     }
 }

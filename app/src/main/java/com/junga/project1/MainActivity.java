@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         if(view.getId() == R.id.button_info){
-            Intent intent = new Intent(MainActivity.this,PlaceBestInfoActivity.class);
+            Intent intent = new Intent(MainActivity.this,DrinksActivity.class);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
 

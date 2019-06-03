@@ -42,15 +42,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/top1" />
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="wrap_content"
-        android:layout_height="345dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="0dp"
@@ -70,15 +61,18 @@
         android:id="@+id/random_pick"
         android:layout_width="wrap_content"
         android:layout_height="49dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="56dp"
         android:background="@drawable/button_style"
         android:fontFamily="sans-serif-light"
         android:paddingLeft="60dp"
         android:paddingRight="60dp"
         android:text="S E E  A L L"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPager"
+        app:layout_constraintVertical_bias="0.673" />
 
     <TextView
         android:id="@+id/go_back"

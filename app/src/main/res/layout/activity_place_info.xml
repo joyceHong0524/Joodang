@@ -34,153 +34,209 @@
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline9">
+        app:layout_constraintTop_toTopOf="@+id/guideline9"
+        app:layout_constraintVertical_bias="0.161">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Le du restaurant"
-                        android:textSize="16dp"
-                        android:textColor="@color/dark_grey"
-                        android:fontFamily="@font/balooda"/>
-
-                    <ImageView
-                        android:layout_width="14dp"
-                        android:layout_height="14dp"
-                        android:src="@drawable/star"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginStart="20dp"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="4dp"
-                        android:text="4.3 (150)"
-                        android:textColor="@color/dark_grey"
-                        android:fontFamily="@font/balooda"
-                        android:textSize="13sp"/>
-                </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="8dp">
-
-
-                <ImageView
-                    android:layout_width="14dp"
-                    android:layout_height="14dp"
-                    android:src="@drawable/place"
-                    android:layout_gravity="center_vertical"
-
-                    />
-                <TextView
-                    android:layout_marginStart="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="225 park Ave S, NewYork,NY 1003-1503"
-                    android:textColor="@color/dark_grey"
-                    android:fontFamily="@font/balooda"
-                    android:textSize="13sp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="8dp"
-                >
-
-
-                <ImageView
-                    android:layout_width="14dp"
-                    android:layout_height="14dp"
-                    android:src="@drawable/clock"
-                    android:layout_gravity="center_vertical"
-
-                    />
-                <TextView
-                    android:layout_marginStart="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Monday- Friday 10:00Am- 23:00PM "
-                    android:textColor="@color/dark_grey"
-                    android:fontFamily="@font/balooda"
-                    android:textSize="13sp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="8dp">
-
-
-                <ImageView
-                    android:layout_width="14dp"
-                    android:layout_height="14dp"
-                    android:src="@drawable/coin"
-                    android:layout_gravity="center_vertical"
-
-                    />
-                <TextView
-                    android:layout_marginStart="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Reasonable prices"
-                    android:textColor="@color/dark_grey"
-                    android:fontFamily="@font/balooda"
-                    android:textSize="13sp"/>
-
-            </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp">
-
-            <ImageView
-                android:layout_width="17dp"
-                android:layout_height="17dp"
-                android:src="@drawable/placeholder"
-                android:layout_gravity="center_vertical"
-                android:layout_marginRight="10dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Location"
-                android:textSize="16dp"
-                android:textColor="@color/dark_grey"
-                android:fontFamily="@font/balooda"/>
-
-
-        </LinearLayout>
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
-                android:layout_height="180dp"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
-                <fragment
-                    android:id="@+id/map"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    class="com.google.android.gms.maps.SupportMapFragment" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/balooda"
+                    android:text="Le du restaurant"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="21dp" />
+
+                <ImageView
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/star" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:fontFamily="@font/balooda"
+                    android:text="  4.3 (150)"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/place"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/kanit_light"
+                    android:text="225 park Ave S, NewYork,NY 1003-1503"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/clock"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/kanit_light"
+                    android:text="Monday- Friday 10:00Am- 23:00PM "
+                    android:textColor="@color/dark_grey"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/coin"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/kanit_light"
+                    android:text="Reasonable prices"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="17dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/information" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/balooda"
+                    android:text="About this place"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="16dp" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:fontFamily="@font/ubuntu_light"
+                android:text="Cheongju usually rice and add yeast and water for a few days and yeast develops. Put it in a jar and add steamed rice, yeast and water three times and store it well. As a result of yeast, the starch of rice turns into 16°C. " />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/placeholder" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/balooda"
+                    android:text="Location"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="16dp" />
+
+
             </LinearLayout>
 
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
 
+                <fragment xmlns:map="http://schemas.android.com/apk/res-auto"
 
+                    android:id="@+id/map"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    class="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    map:cameraZoom="15" />
 
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button_style2"
+                    android:fontFamily="@font/ubuntu_light"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="See it at the google map"
+                    android:textSize="11sp" />
+            </LinearLayout>
 
 
         </LinearLayout>

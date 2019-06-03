@@ -6,20 +6,10 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/main_background"
     android:weightSum="100">
 
 
-    <View
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@color/colorPrimaryDark"
-        andorid:layout_constraintBottom_toBottomOf="parent"
-        andorid:layout_constraintEnd_toEndOf="parent"
-        andorid:layout_constraintHorizontal_bias="0.0"
-        andorid:layout_constraintStart_toStartOf="parent"
-        andorid:layout_constraintTop_toTopOf="@+id/guideline3"
-        andorid:layout_constraintVertical_bias="0.0" />
 
 
     <ImageView
@@ -41,8 +31,19 @@
         android:id="@+id/button_info"
         android:layout_width="0dp"
         android:layout_height="170dp"
-        android:background="@drawable/button_koreandrink"
-
+        android:layout_marginTop="8dp"
+        android:background="@drawable/button_style3"
+        android:elevation="13dp"
+        android:paddingLeft="13dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Korean
+Traditional
+Drink. "
+        android:textColor="@color/white"
+        android:textSize="34dp"
+        android:gravity="center_vertical"
+        android:fontFamily="@font/bungee_inline"
         andorid:layout_constraintBottom_toTopOf="@+id/button_best"
         andorid:layout_constraintEnd_toStartOf="@+id/guideline2"
         andorid:layout_constraintHorizontal_bias="0.0"
@@ -53,8 +54,19 @@
         android:id="@+id/button_best"
         android:layout_width="0dp"
         android:layout_height="170dp"
-        android:background="@drawable/button_bestpub"
-        andorid:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/button_style3"
+        android:text="Best Bars
+IN Seoul."
+        android:fontFamily="@font/bungee_inline"
+        android:textSize="34dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:paddingLeft="13dp"
+        andorid:layout_constraintBottom_toTopOf="@+id/textView8"
         andorid:layout_constraintEnd_toStartOf="@+id/guideline2"
         andorid:layout_constraintHorizontal_bias="0.0"
         andorid:layout_constraintStart_toStartOf="@+id/guideline"
@@ -81,7 +93,33 @@
         android:orientation="horizontal"
         andorid:layout_constraintGuide_percent="0.31" />
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/ubuntu_light"
+        android:text="ⓒ"
+        android:textColor="@color/white"
+        andorid:layout_constraintBottom_toBottomOf="parent"
+        andorid:layout_constraintEnd_toStartOf="@+id/textView8"
+        andorid:layout_constraintHorizontal_chainStyle="packed"
+        andorid:layout_constraintStart_toStartOf="@+id/guideline" />
 
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/rajd_light"
+        android:text="JOODANG"
+        android:textColor="@color/white"
+        andorid:layout_constraintBottom_toBottomOf="parent"
+        andorid:layout_constraintEnd_toStartOf="@+id/guideline2"
+        andorid:layout_constraintHorizontal_bias="0.0"
+        andorid:layout_constraintStart_toEndOf="@+id/textView" />
 
 
 </android.support.constraint.ConstraintLayout>
