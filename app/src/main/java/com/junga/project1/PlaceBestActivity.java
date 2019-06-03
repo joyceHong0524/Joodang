@@ -9,6 +9,8 @@ import android.media.Image;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -23,6 +25,9 @@ import jp.wasabeef.glide.transformations.BlurTransformation;
 
 public class PlaceBestActivity extends AppCompatActivity {
 
+
+    RecyclerView recyclerView;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +38,14 @@ public class PlaceBestActivity extends AppCompatActivity {
 //        d = RoundedCorner.getRoundCornerBitmap(d,180);
 //        Glide.with(this).load(d).into(imageView);
 //        imageView.setClipToOutline(true);
+
+        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+
+      LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        RecyclerViewAdpater adpater = new RecyclerViewAdpater(this);
+
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(adpater);
 
 
     }
