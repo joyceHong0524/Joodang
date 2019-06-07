@@ -8,7 +8,8 @@
     android:layout_height="match_parent"
     android:background="@drawable/main_background"
     android:weightSum="100">
-
+    <include layout="@layout/toolbar"
+        ></include>
 
 
 
@@ -26,7 +27,6 @@
         andorid:layout_constraintTop_toTopOf="parent"
         andorid:layout_constraintVertical_bias="0.0" />
 
-
     <Button
         android:id="@+id/button_info"
         android:layout_width="0dp"
@@ -41,7 +41,7 @@
 Traditional
 Drink. "
         android:textColor="@color/white"
-        android:textSize="34dp"
+        android:textSize="30sp"
         android:gravity="center_vertical"
         android:fontFamily="@font/bungee_inline"
         andorid:layout_constraintBottom_toTopOf="@+id/button_best"
@@ -60,9 +60,9 @@ Drink. "
         android:layout_marginRight="10dp"
         android:background="@drawable/button_style3"
         android:text="Best Bars
-IN Seoul."
+        IN Seoul."
         android:fontFamily="@font/bungee_inline"
-        android:textSize="34dp"
+        android:textSize="30sp"
         android:gravity="center_vertical"
         android:textColor="@color/white"
         android:paddingLeft="13dp"

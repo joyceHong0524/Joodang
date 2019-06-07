@@ -5,13 +5,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/jack"
+    android:id="@+id/layout"
+    >
+
+    <include layout="@layout/toolbar"/>
 
     <View
         android:id="@+id/view"
         android:layout_width="wrap_content"
         android:layout_height="345dp"
-        android:background="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -40,7 +44,7 @@
         android:fontFamily="sans-serif-light"
         android:paddingLeft="60dp"
         android:paddingRight="60dp"
-        android:text="L E A R N  M O R E "
+        android:text="R A N D O M  F A C T S"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

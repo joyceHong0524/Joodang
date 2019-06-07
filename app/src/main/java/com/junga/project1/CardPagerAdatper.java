@@ -22,7 +22,7 @@ public class CardPagerAdatper extends PagerAdapter implements  CardAdapter {
 
     public final static int SOJU = 0;
     public final static int CHEONGJU = 1;
-    public final static int MAKGEOLI = 2;
+    public final static int MAKGEOLLI = 2;
 
     public final static int HONGDAE = 0;
     public final static int GANGNAM = 1;
@@ -120,7 +120,7 @@ public class CardPagerAdatper extends PagerAdapter implements  CardAdapter {
                     @Override
                     public void onClick(View view) {
                         Intent intent = new Intent(context,DrinksInfoActivity.class);
-                        intent.putExtra("type",MAKGEOLI);
+                        intent.putExtra("type",MAKGEOLLI);
                         context.startActivity(intent);
                     }
                 });

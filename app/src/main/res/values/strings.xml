@@ -1,3 +1,37 @@
 <resources>
     <string name="app_name">project1</string>
+
+
+//    Drinks Info
+
+    <string name="name_cheongju">Cheong Ju</string>
+    <string name="name_soju">Soju</string>
+    <string name="name_makgeolli">Makgeolli</string>
+
+    <string name="history_title_soju">History of Soju</string>
+    <string name="history_title_cheongju">History of Cheong ju</string>
+    <string name="history_title_makgeoli">History of Makgeoli</string>
+
+    <string name="how_to">How to make this drink?</string>
+    <string name="how_to_drink_makgeolli">How to drink Makgeolli?</string>
+    <string name="variety_cheongju_title">Varieties of Cheongju</string>
+    <string name="food_with">Food that people drink with</string>
+
+    <string name="history_content_soju">Soju (소주) is South Korea’s dearest and most consumed alcoholic beverage, it’s considered as the “National Drink”, it’s a clear and colorless distilled beverage whose story is as ancient as South Korea’s civilization with its characteristic green bottle package you are sure to have seen it on the shelves of convenience stores or local supermarkets. Soju was brought in by Mongol invaders in the early 13th century during the Goryeo Dynasty. According to history sources Genghis Kahn introduced this kind of drink to Mongolia and the his grandson Kublai Khan, first emperor of the Yuan Dynasty brought it to Korea.</string>
+    <string name="history_content_cheongju">According to Things on Korea, the Goryeo people used non-glutinous rice to brew rice wine. Another 12th-century Chinese book, Illustrated Account of Goryeo, reports that Korean rice wine that is made with nuruk, is deeper in color and has a higher alcohol content. It says that when drinking this wine one gets drunk quickly and sobers up quickly. This book also says that when drinking Cheongju people get drunk really quickly and sorhers up quickly as well.</string>
+    <string name="history_content_makgeolli">The history of makgeolli goes back some 2,000 years. The first documented mention of it can be found in a book from the Goryeo Dynasty (918~1392), where it is referred to during the reign of King Dongmyeong. During this time, it was called ihwa-ju (pear blossom alcohol), as the drink was made at the specific time of year when this tree bloomed. Analogous to European low-alcohol beer, makgeolli was the drink of farmers, peasants and the working classes — so much so that it was also known by another name, nonju (“farmer’s liquor”). This has historically meant that makgeolli and soju have been symbolic of a divide between social classes.</string>
+
+    <string name="how_to_soju">Traditional Soju’s main ingredients are rice and wheat and goes through a distilment process and gives its high alcoholic content. But there was a time when that was not the case, during the Post-Liberation Period in 1965 the government banned the use of rice to brew alcohol, thus replacing it with diluted Soju. Before the ban on rice was lifted, South Korea started using sweet potatoes or tapioca to make alcohol, which opened way to many of the most popular Soju brands like Chamisul (참이슬), Chum Churum (처음처럼), Good Day (좋은데이) to name a few, today, however, many of them still use the distillation method for their production process.</string>
+    <string name="how_to_makgeolli">
+Makgeolli, like soju, uses three simple ingredients — rice, water and the traditional fermenting agent nuruk. Nuruk is a dry cake comprised of bacteria, wild yeasts and koji mould spores. Added to cooked sweet rice and water, this is left for around a week, and the nuruk acts to break down starch in the rice into sugar and then alcohol, producing a strong (15–19% ABV), sweet mixture called wonju. This is allowed to settle, and the top clear liquid separated. The resultant alcohol is cheonju, which was the drink of the Yangban (Korean aristocracy), and which can be distilled to make soju (as the eagle-eyed may have spotted, -ju in Korean means “alcohol”). The remaining settled sediment, also known as takju, is diluted with water, and roughly strained (but not filtered), to make makgeolli.</string>
+    <string name="how_to_cheongju">Cheongju is usually brewed in winter, between the months of November and March. Steamed rice mixed with nuruk (fermentation starter) and water is left to ferment for 16 to 25 days, at a temperature not higher than 14–16 °C (57–61 °F). During the fermentation process, the rice starch becomes saccharified; the yeast fungi feed on the sugars created by saccharification and produce alcohol. The fermented wine is then filtered with yongsu (a wine strainer), which is dipped into the liquid. The clear wine inside the yongsu is ladled out to make cheongju.</string>
+
+
+
+    <string name="food_with_soju">Like we said before, Soju is a drink for comfort and solidarity the same way you shouldn’t drink alone, you also shouldn’t just drink Soju.
+        Anju (안주) is a general term for Korean food that is consumed with alcohol. It covers a variety of food, including main dishes and side dishes.
+        Soju usually really goes well with pork. Samgyeopsal is one of them which consists of thick pork strips. It is usually cooked on a grill with kimchi, mushrooms,garlic,onions and consumed altogether in the form of Ssam.(쌈)</string>
+    <string name="food_with_makgeolli">There are two ways to drink makgeolli. The traditional way is to pair it with hearty foods such as anju (bar food), pajeon (green onion pancake) or bindaetteok (mung-bean pancake). Busan makgeolli pairs well with seasoned bulgogi (barbecued beef). Whatever you drink it with, it should be sipped from rustic tukbaegi (a small earthen bowl) and poured from a clay container. As it contains sediment, the makgeolli should be either shaken or stirred before pouring. Whilst unpasteurised makgeolli can be matured in the bottle to produce complex flavours, it’s more often served fresh.</string>
+    <string name="variety_cheongju_content">Southern cities in South Korea such as Masan, Gunsan, and Nonsan are famous for producing good cheongju. Beopju brewed in Gyeongju and sogok-ju brewed in Hansan are well-known varieties of cheongju.[9] There also are cheongju varieties made with glutinous rice or black rice.
+Flavoured cheongju varieites include gukhwa-ju made with chrysanthemum, dugyeon-ju made with rhododendron, songsun-ju made with pine sprouts, yeonyeop-ju made with lotus leaves, and insam-ju made with ginseng.</string>
 </resources>

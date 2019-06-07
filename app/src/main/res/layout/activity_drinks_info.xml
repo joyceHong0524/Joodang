@@ -6,12 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="fitXY"
-        android:src="@drawable/info_cheongha"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +22,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="fitXY"
-        android:src="@drawable/overlay"
+
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -110,7 +110,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/drink_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
@@ -158,18 +158,17 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/title_history"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/fredoka"
                     android:text="History of Cheong ju"
                     android:textColor="@color/black"
-                    android:textSize="19dp"
-                    />
+                    android:textSize="19dp" />
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/content_history"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
@@ -178,45 +177,43 @@
                     android:text="Cheongju usually breeds cold and air-free winters (November-March). Strain rice and add yeast and water for a few days and yeast develops. Put it in a jar and add steamed rice, yeast and water three times and store it well. As a result of yeast, the starch of rice turns into sugars and turns into alcohol. Normally, it's at 14 to 16°C. " />
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/how_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:fontFamily="@font/fredoka"
                     android:text="How to make this?"
                     android:textColor="@color/black"
-                    android:textSize="19dp"
-                  />
+                    android:textSize="19dp" />
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/how_content"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="8dp"
                     android:fontFamily="@font/ubuntu_light"
-                    android:text="The first class liquor has the same alcohol content as the first class, but the original one-ex ingredient is 29°. Other Class 2 states have a slight decrease in alcohol content, which is more than 15°, but the original X is much lower than the five-star class, which is 26.5°This is because the bitter taste of rice wine includes alcohol, lactic acid,"
-                  />
+                    android:text="The first class liquor has the same alcohol content as the first class, but the original one-ex ingredient is 29°. Other Class 2 states have a slight decrease in alcohol content, which is more than 15°, but the original X is much lower than the five-star class, which is 26.5°This is because the bitter taste of rice wine includes alcohol, lactic acid," />
 
                 <TextView
+                    android:id="@+id/food_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="32dp"
                     android:fontFamily="@font/fredoka"
                     android:text="Foods that we drink with"
                     android:textColor="@color/black"
-                    android:textSize="19dp"
-                    />
+                    android:textSize="19dp" />
 
                 <TextView
+                    android:id="@+id/food_content"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="8dp"
                     android:layout_marginBottom="30dp"
                     android:fontFamily="@font/ubuntu_light"
-                    android:text="The first class liquor has the same alcohol content as the first class, but the original one-ex ingredient is 29°. Other Class 2 states have a slight decrease in alcohol content, which is more than 15°, but the original X is much lower than the five-star class, which is 26.5°This is because the bitter taste of rice wine includes alcohol, lactic acid,"
-                    />
+                    android:text="The first class liquor has the same alcohol content as the first class, but the original one-ex ingredient is 29°. Other Class 2 states have a slight decrease in alcohol content, which is more than 15°, but the original X is much lower than the five-star class, which is 26.5°This is because the bitter taste of rice wine includes alcohol, lactic acid," />
 
 
 
@@ -225,6 +222,7 @@
     </LinearLayout>
 
 
+    <include layout="@layout/toolbar" />
 
 
 </android.support.constraint.ConstraintLayout>
