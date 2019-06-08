@@ -94,13 +94,14 @@ public class DrinksActivity extends AppCompatActivity implements View.OnClickLis
 
             ArrayList<String> funfacts = new ArrayList<>();
             funfacts.add("Soju is a distilled colorless beverage that can be as strong as 53% down to 16.8%");
-            funfacts.add("THEY DRINK TWICE AS MUCH ALCOHOL AS RUSSIANS");
+            funfacts.add("Koreans drink twice as much alcohol as russians.");
             funfacts.add("South Koreans drink 13.7 shots of liquor per week on average, which is the most in the world.");
             funfacts.add("In fact, the South Korean liquor accounts for 97% of the country’s spirits market.");
             funfacts.add("Pouring your own glass in a group is considered impolite");
             funfacts.add("Korean would drink to celebrate holidays and show respect for ancestors.");
 
             Snackbar snackbar = Snackbar.make(layout,funfacts.get(i),Snackbar.LENGTH_LONG);
+            snackbar.show();
 
 
 

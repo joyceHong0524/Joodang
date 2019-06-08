@@ -67,7 +67,7 @@
         android:fontFamily="sans-serif-light"
         android:paddingLeft="60dp"
         android:paddingRight="60dp"
-        android:text="S E E  A L L"
+        android:text="P I C K   R A N D O M"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

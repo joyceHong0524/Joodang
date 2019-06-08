@@ -32,6 +32,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonInfo.setOnClickListener(this);
         buttonBest.setOnClickListener(this);
 
+        buttonBest.setText("Best Bars\nIn Seoul");
+        buttonInfo.setText("Korean\nTraditional\nDrinks");
+
         //Set animation
         Animation slideInRight = AnimationUtils.loadAnimation(MainActivity.this,R.anim.slide_in_half_right);
         Animation slideInLeft = AnimationUtils.loadAnimation(MainActivity.this,R.anim.slide_in_half_left);

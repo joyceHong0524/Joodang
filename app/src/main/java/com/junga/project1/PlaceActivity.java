@@ -71,6 +71,11 @@ public class PlaceActivity extends AppCompatActivity implements View.OnClickList
             Random random = new Random();
             clicked_page = random.nextInt(3);
             Log.d(TAG, "random num :" + clicked_page);
+
+            Intent intent = new Intent(PlaceActivity.this,PlaceBestActivity.class);
+            intent.putExtra("type",clicked_page);
+            startActivity(intent);
+
         }
 
     }

@@ -224,4 +224,5 @@ public class DrinksInfoActivity extends AppCompatActivity implements View.OnClic
 
         }
     }
+
 }

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <include layout="@layout/toolbar"/>
+
     <ImageView
         android:id="@+id/title_image"
         android:layout_width="0dp"
@@ -248,5 +248,6 @@
 
         </LinearLayout>
     </ScrollView>
+    <include layout="@layout/toolbar"/>
 
 </android.support.constraint.ConstraintLayout>
