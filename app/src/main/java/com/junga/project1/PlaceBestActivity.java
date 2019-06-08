@@ -61,9 +61,9 @@ public class PlaceBestActivity extends AppCompatActivity {
         switch (place){
             case CardPagerAdatper.HONGDAE:
 
-                arrayList.add(new RestaurantVO("Hongdae",R.drawable.hongdae,"GaeWhaGi Yojeong","Traditional, izakaya, bit pricy","4.3 (201)","Seogyo Dong","2 AM"));
-                arrayList.add(new RestaurantVO("Hongdae",R.drawable.hongdae,"GaeWhaGi Yojeong","Traditional, izakaya, bit pricy","4.3 (201)","Seogyo Dong","2 AM"));
-                arrayList.add(new RestaurantVO("Hongdae",R.drawable.hongdae,"GaeWhaGi Yojeong","Traditional, izakaya, bit pricy","4.3 (201)","Seogyo Dong","2 AM"));
+                arrayList.add(new RestaurantVO("Hongdae",R.drawable.hongdae_restaurant1,"GaeWhaGi Yojeong","Traditional, izakaya, bit pricy","4.3 (201)","Seogyo Dong","2 AM","401-5 Seogyo-dong, Mapo-gu, Seoul","20$ - 30$ / dish","Everyday 2:00 PM - 2:00AM","Gaehwagi Yojeong is highly recommended Korean drinking place where exactly reproduces the street of Seoul in 19th century. Since the motive of this place is 19th, when a lot of foreign culture flood into Chosun, you can try a lot of foreign food like japanese food. ",37.548907,126.919298));
+                arrayList.add(new RestaurantVO("Hongdae",R.drawable.hongdae_restaurant2,"GaeWhaGi Yojeong","Traditional, izakaya, bit pricy","4.3 (201)","Seogyo Dong","2 AM","401-5 Seogyo-dong, Mapo-gu, Seoul","20$ - 30$ / dish","Everyday 2:00 PM - 2:00AM","Gaehwagi Yojeong is highly recommended Korean drinking place where exactly reproduces the street of Seoul in 19th century. Since the motive of this place is 19th, when a lot of foreign culture flood into Chosun, you can try a lot of foreign food like japanese food. ",37.548907,126.919298));
+                arrayList.add(new RestaurantVO("Hongdae",R.drawable.hongdae_restaurant3,"GaeWhaGi Yojeong","Traditional, izakaya, bit pricy","4.3 (201)","Seogyo Dong","2 AM","401-5 Seogyo-dong, Mapo-gu, Seoul","20$ - 30$ / dish","Everyday 2:00 PM - 2:00AM","Gaehwagi Yojeong is highly recommended Korean drinking place where exactly reproduces the street of Seoul in 19th century. Since the motive of this place is 19th, when a lot of foreign culture flood into Chosun, you can try a lot of foreign food like japanese food. ",37.548907,126.919298));
                 break;
             case CardPagerAdatper.GANGNAM:
 

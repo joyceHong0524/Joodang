@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -56,11 +57,9 @@ public class RecyclerViewAdpater extends RecyclerView.Adapter<RecyclerViewAdpate
         myViewHolder.view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 //Going to pass this restuarant VO!!!
-                Intent intent = new Intent();
+                Intent intent = new Intent(context,PlaceBestInfoActivity.class);
                 intent.putExtra("restaurant",data);
-
                 context.startActivity(intent);
 
             }
@@ -78,12 +77,12 @@ public class RecyclerViewAdpater extends RecyclerView.Adapter<RecyclerViewAdpate
 
         ImageView title_image;
         TextView resName,resAttr,star,dongName,closeTime;
-        View view;
+        CardView view;
 
         public MyViewHolder(@NonNull final View itemView) {
             super(itemView);
 
-            view = (LinearLayout) itemView.findViewById(R.id.layout);
+            view = (CardView) itemView.findViewById(R.id.layout);
             title_image = (ImageView) itemView.findViewById(R.id.title_image);
             resName = (TextView) itemView.findViewById(R.id.res_name);
             resAttr = (TextView) itemView.findViewById(R.id.res_attr);

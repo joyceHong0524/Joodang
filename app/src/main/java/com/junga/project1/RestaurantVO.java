@@ -17,6 +17,34 @@ public class RestaurantVO implements Serializable {
     private String closeTime;
 
 
+
+    // This is for Place information Page
+
+    private String resAddress;
+    private String resPrice;
+    private String resOpenClose;
+    private String resDescription;
+    private double longitude;
+    private double latitude;
+
+
+    public RestaurantVO(String areaName, int drawable, String name, String attr, String star, String dongName, String closeTime, String resAddress, String resPrice, String resOpenClose, String resDescription, double latitude, double longitude) {
+        this.areaName = areaName;
+        this.drawable = drawable;
+        this.name = name;
+        this.attr = attr;
+        this.star = star;
+        this.dongName = dongName;
+        this.closeTime = closeTime;
+
+        this.resAddress = resAddress;
+        this.resPrice = resPrice;
+        this.resOpenClose = resOpenClose;
+        this.resDescription = resDescription;
+        this.longitude = longitude;
+        this.latitude = latitude;
+    }
+
     public int getDrawable() {
         return drawable;
     }
@@ -73,17 +101,52 @@ public class RestaurantVO implements Serializable {
         this.areaName = areaName;
     }
 
-    public RestaurantVO(String areaName,int drawable, String name, String attr, String star, String dongName, String closeTime) {
-        this.areaName = areaName;
-        this.drawable = drawable;
-        this.name = name;
-        this.attr = attr;
-        this.star = star;
-        this.dongName = dongName;
-        this.closeTime = closeTime;
+
+    public String getResAddress() {
+        return resAddress;
     }
 
+    public void setResAddress(String resAddress) {
+        this.resAddress = resAddress;
+    }
 
-//This is for Place information Page
+    public String getResPrice() {
+        return resPrice;
+    }
 
+    public void setResPrice(String resPrice) {
+        this.resPrice = resPrice;
+    }
+
+    public String getResOpenClose() {
+        return resOpenClose;
+    }
+
+    public void setResOpenClose(String resOpenClose) {
+        this.resOpenClose = resOpenClose;
+    }
+
+    public String getResDescription() {
+        return resDescription;
+    }
+
+    public void setResDescription(String resDescription) {
+        this.resDescription = resDescription;
+    }
+
+    public double getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(float longitude) {
+        this.longitude = longitude;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(float latitude) {
+        this.latitude = latitude;
+    }
 }
