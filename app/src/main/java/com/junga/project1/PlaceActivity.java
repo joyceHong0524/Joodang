@@ -19,7 +19,7 @@ import java.util.Random;
 
 import jp.wasabeef.blurry.Blurry;
 
-public class PlaceActivity extends AppCompatActivity implements View.OnClickListener{
+public class PlaceActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final String TAG = "PlaceActivity";
 
@@ -33,6 +33,7 @@ public class PlaceActivity extends AppCompatActivity implements View.OnClickList
 
 
     Button hongdae;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,32 +49,32 @@ public class PlaceActivity extends AppCompatActivity implements View.OnClickList
         random.setOnClickListener(this);
 
 
-        Animation animation = AnimationUtils.loadAnimation(this,R.anim.slide_in_half_left);
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.slide_in_half_left);
         top1.setAnimation(animation);
         top2.setAnimation(animation);
 
 
-        CardPagerAdatper cardPagerAdatper = new CardPagerAdatper(CardPagerAdatper.PLACE_CARD,this);
-        ShadowTransformer shadow = new ShadowTransformer(viewPager,cardPagerAdatper);
+        CardPagerAdatper cardPagerAdatper = new CardPagerAdatper(CardPagerAdatper.PLACE_CARD, this);
+        ShadowTransformer shadow = new ShadowTransformer(viewPager, cardPagerAdatper);
         shadow.enableScaling(true);
         viewPager.setPageMargin(30);
         viewPager.setOffscreenPageLimit(3);
-        viewPager.setPageTransformer(false,shadow);
+        viewPager.setPageTransformer(false, shadow);
         viewPager.setAdapter(cardPagerAdatper);
     }
 
     @Override
     public void onClick(View view) {
 
-        if(view.getId() == R.id.go_back){
+        if (view.getId() == R.id.go_back) {
             finish();
-        }else if (view.getId()==R.id.random_pick){
+        } else if (view.getId() == R.id.random_pick) {
             Random random = new Random();
             clicked_page = random.nextInt(3);
             Log.d(TAG, "random num :" + clicked_page);
 
-            Intent intent = new Intent(PlaceActivity.this,PlaceBestActivity.class);
-            intent.putExtra("type",clicked_page);
+            Intent intent = new Intent(PlaceActivity.this, PlaceBestActivity.class);
+            intent.putExtra("type", clicked_page);
             startActivity(intent);
 
         }

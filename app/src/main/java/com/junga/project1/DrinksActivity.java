@@ -45,20 +45,20 @@ public class DrinksActivity extends AppCompatActivity implements View.OnClickLis
         learnMore.setOnClickListener(this);
         goBack.setOnClickListener(this);
 
-         mCardAdapter = new CardPagerAdatper(CardPagerAdatper.DRINK_CARD,this);
+        mCardAdapter = new CardPagerAdatper(CardPagerAdatper.DRINK_CARD, this);
 
-         mCardShadowTransformer = new ShadowTransformer(viewPager,mCardAdapter);
-         mCardShadowTransformer.enableScaling(true);
-         viewPager.setPageTransformer(false,mCardShadowTransformer);
-         viewPager.setOffscreenPageLimit(3);
-         viewPager.setPageMargin(30);
-         viewPager.setAdapter(mCardAdapter);
+        mCardShadowTransformer = new ShadowTransformer(viewPager, mCardAdapter);
+        mCardShadowTransformer.enableScaling(true);
+        viewPager.setPageTransformer(false, mCardShadowTransformer);
+        viewPager.setOffscreenPageLimit(3);
+        viewPager.setPageMargin(30);
+        viewPager.setAdapter(mCardAdapter);
         Log.d(TAG, "currentItem " + viewPager.getCurrentItem());
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
-        if(getSupportActionBar()!= null){
+        if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true); //따로 클릭이벤트는 설정해야됨 android.R.id.home으로다
             getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back_white_24dp);
         }
@@ -67,13 +67,13 @@ public class DrinksActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu1,menu);
+        getMenuInflater().inflate(R.menu.menu1, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch(item.getItemId()){
+        switch (item.getItemId()) {
             case android.R.id.home:
                 finish();
                 return true;
@@ -85,9 +85,9 @@ public class DrinksActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View view) {
 
-        if (view.getId() == R.id.go_back){
+        if (view.getId() == R.id.go_back) {
             finish();
-        } else if(view.getId()==R.id.button4){
+        } else if (view.getId() == R.id.button4) {
 
             Random random = new Random();
             int i = random.nextInt(5);
@@ -100,17 +100,14 @@ public class DrinksActivity extends AppCompatActivity implements View.OnClickLis
             funfacts.add("Pouring your own glass in a group is considered impolite");
             funfacts.add("Korean would drink to celebrate holidays and show respect for ancestors.");
 
-            Snackbar snackbar = Snackbar.make(layout,funfacts.get(i),Snackbar.LENGTH_LONG);
+            Snackbar snackbar = Snackbar.make(layout, funfacts.get(i), Snackbar.LENGTH_LONG);
             snackbar.show();
-
 
 
         }
 
 
     }
-
-
 
 
 }

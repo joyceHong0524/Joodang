@@ -16,14 +16,14 @@ public class CardFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_adpater,container,false);
+        View view = inflater.inflate(R.layout.fragment_adpater, container, false);
         mCardView = (CardView) view.findViewById(R.id.cardView);
-        mCardView.setMaxCardElevation(mCardView.getElevation()*CardAdapter.MAX_ELEVATION_FACTOR);
+        mCardView.setMaxCardElevation(mCardView.getElevation() * CardAdapter.MAX_ELEVATION_FACTOR);
 
         return view;
     }
 
-    public CardView getmCardView(){
+    public CardView getmCardView() {
         return mCardView;
     }
 }

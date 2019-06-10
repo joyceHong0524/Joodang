@@ -27,10 +27,10 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class PlaceBestInfoActivity extends AppCompatActivity implements OnMapReadyCallback, View.OnClickListener {
 
     private static final String TAG = "PlaceBestInfoActivity";
-    
+
     RestaurantVO resData;
     ImageView titleImage;
-    TextView resName,star,resAddress,resOpenClose,resPrice,resDescription;
+    TextView resName, star, resAddress, resOpenClose, resPrice, resDescription;
 
 
     @Override
@@ -44,14 +44,12 @@ public class PlaceBestInfoActivity extends AppCompatActivity implements OnMapRea
         resName = (TextView) findViewById(R.id.res_name);
         star = (TextView) findViewById(R.id.star);
         resAddress = (TextView) findViewById(R.id.res_address);
-        resPrice =(TextView) findViewById(R.id.price);
+        resPrice = (TextView) findViewById(R.id.price);
         resOpenClose = (TextView) findViewById(R.id.res_openclose);
-        resDescription =(TextView) findViewById(R.id.res_description);
+        resDescription = (TextView) findViewById(R.id.res_description);
 
         setView();
         setToolbar();
-
-
 
 
         FragmentManager fragmentManager = getSupportFragmentManager();
@@ -67,7 +65,7 @@ public class PlaceBestInfoActivity extends AppCompatActivity implements OnMapRea
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
-        LatLng PLACE = new LatLng(resData.getLatitude(),resData.getLongitude());
+        LatLng PLACE = new LatLng(resData.getLatitude(), resData.getLongitude());
 
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(PLACE);
@@ -81,16 +79,16 @@ public class PlaceBestInfoActivity extends AppCompatActivity implements OnMapRea
     @Override
     public void onClick(View view) {
 
-        if (view.getId()==R.id.button){
+        if (view.getId() == R.id.button) {
             Double myLatitude = resData.getLatitude();
             Double myLongitude = resData.getLongitude();
             String labelLocation = resData.getName(); //I don't know why but this label doesn't work.
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:<" + myLatitude  + ">,<" + myLongitude + ">?q=<" + myLatitude  + ">,<" + myLongitude + ">(" + labelLocation + ")"));
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:<" + myLatitude + ">,<" + myLongitude + ">?q=<" + myLatitude + ">,<" + myLongitude + ">(" + labelLocation + ")"));
             startActivity(intent);
         }
     }
 
-    private void setView(){
+    private void setView() {
 
         Glide.with(this).load(resData.getDrawable()).into(titleImage);
         resName.setText(resData.getName());
@@ -101,12 +99,13 @@ public class PlaceBestInfoActivity extends AppCompatActivity implements OnMapRea
         resDescription.setText(resData.getResDescription());
 
     }
-    private void setToolbar(){
+
+    private void setToolbar() {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
 
-        if (getSupportActionBar()!=null){
+        if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back_white_24dp);
         }
@@ -115,7 +114,7 @@ public class PlaceBestInfoActivity extends AppCompatActivity implements OnMapRea
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch(item.getItemId()){
+        switch (item.getItemId()) {
             case android.R.id.home:
                 finish();
                 return true;

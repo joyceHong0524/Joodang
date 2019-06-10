@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class CardPagerAdatper extends PagerAdapter implements  CardAdapter {
+public class CardPagerAdatper extends PagerAdapter implements CardAdapter {
 
     public final static int DRINK_CARD = 0;
     public final static int PLACE_CARD = 1;
@@ -37,13 +37,14 @@ public class CardPagerAdatper extends PagerAdapter implements  CardAdapter {
     public CardPagerAdatper(int type, Context context) {
         mViews = new ArrayList<>();
 
-        for(int i=0; i<3; i++) {
+        for (int i = 0; i < 3; i++) {
             mViews.add(null);
         }
         this.type = type;
         this.context = context;
 
     }
+
     @Override
     public float getBaseElevation() {
         return mBaseElevation;
@@ -61,105 +62,112 @@ public class CardPagerAdatper extends PagerAdapter implements  CardAdapter {
 
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object o) {
-        return view==o;
+        return view == o;
     }
 
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         View view = LayoutInflater.from(container.getContext())
-                .inflate(R.layout.fragment_adpater,container,false);
+                .inflate(R.layout.fragment_adpater, container, false);
 
         container.addView(view);
-        bind(position,view);
+        bind(position, view);
         CardView cardView = (CardView) view.findViewById(R.id.cardView);
-        if(mBaseElevation == 0){
+        if (mBaseElevation == 0) {
             mBaseElevation = cardView.getCardElevation();
         }
 
-        cardView.setMaxCardElevation(mBaseElevation*MAX_ELEVATION_FACTOR);
-        mViews.set(position,cardView);
+        cardView.setMaxCardElevation(mBaseElevation * MAX_ELEVATION_FACTOR);
+        mViews.set(position, cardView);
         return view;
     }
 
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
         container.removeView((View) object);
-        mViews.set(position,null);
+        mViews.set(position, null);
     }
 
-    private void bind(int position, View view){
+    private void bind(int position, View view) {
         ImageView imageView = (ImageView) view.findViewById(R.id.image);
 
 
-
-        if(type == DRINK_CARD){
-        switch(position){
-            case 0: imageView.setImageResource(R.drawable.fragment_soju);
+        if (type == DRINK_CARD) {
+            switch (position) {
+                case 0:
+                    imageView.setImageResource(R.drawable.fragment_soju);
                     imageView.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            Intent intent = new Intent(context,DrinksInfoActivity.class);
-                            intent.putExtra("type",SOJU);
+                            Intent intent = new Intent(context, DrinksInfoActivity.class);
+                            intent.putExtra("type", SOJU);
                             context.startActivity(intent);
                         }
                     });
                     break;
-            case 1: imageView.setImageResource(R.drawable.fragment_cheongju);
-                imageView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent intent = new Intent(context,DrinksInfoActivity.class);
-                        intent.putExtra("type",CHEONGJU);
-                        context.startActivity(intent);
-                    }
-                });
+                case 1:
+                    imageView.setImageResource(R.drawable.fragment_cheongju);
+                    imageView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent intent = new Intent(context, DrinksInfoActivity.class);
+                            intent.putExtra("type", CHEONGJU);
+                            context.startActivity(intent);
+                        }
+                    });
                     break;
-            case 2: imageView.setImageResource(R.drawable.fragment_makgeoli);
-                imageView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent intent = new Intent(context,DrinksInfoActivity.class);
-                        intent.putExtra("type",MAKGEOLLI);
-                        context.startActivity(intent);
-                    }
-                });
+                case 2:
+                    imageView.setImageResource(R.drawable.fragment_makgeoli);
+                    imageView.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Intent intent = new Intent(context, DrinksInfoActivity.class);
+                            intent.putExtra("type", MAKGEOLLI);
+                            context.startActivity(intent);
+                        }
+                    });
                     break;
-            default : break;
+                default:
+                    break;
             }
-        }else if (type == PLACE_CARD){
-            switch(position){
-                case 0: imageView.setImageResource(R.drawable.card_hongdae);
+        } else if (type == PLACE_CARD) {
+            switch (position) {
+                case 0:
+                    imageView.setImageResource(R.drawable.card_hongdae);
                     imageView.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            Intent intent = new Intent(context,PlaceBestActivity.class);
-                            intent.putExtra("type",HONGDAE);
+                            Intent intent = new Intent(context, PlaceBestActivity.class);
+                            intent.putExtra("type", HONGDAE);
                             context.startActivity(intent);
                         }
                     });
                     break;
-                case 1: imageView.setImageResource(R.drawable.card_gangnam);
+                case 1:
+                    imageView.setImageResource(R.drawable.card_gangnam);
                     imageView.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            Intent intent = new Intent(context,PlaceBestActivity.class);
-                            intent.putExtra("type",GANGNAM);
+                            Intent intent = new Intent(context, PlaceBestActivity.class);
+                            intent.putExtra("type", GANGNAM);
                             context.startActivity(intent);
                         }
                     });
                     break;
-                case 2: imageView.setImageResource(R.drawable.card_itaewon);
+                case 2:
+                    imageView.setImageResource(R.drawable.card_itaewon);
                     imageView.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            Intent intent = new Intent(context,PlaceBestActivity.class);
-                            intent.putExtra("type",ITAEWON);
+                            Intent intent = new Intent(context, PlaceBestActivity.class);
+                            intent.putExtra("type", ITAEWON);
                             context.startActivity(intent);
                         }
                     });
                     break;
-                default : break;
+                default:
+                    break;
             }
         }
     }

@@ -17,7 +17,6 @@ public class RestaurantVO implements Serializable {
     private String closeTime;
 
 
-
     // This is for Place information Page
 
     private String resAddress;
@@ -93,11 +92,11 @@ public class RestaurantVO implements Serializable {
         this.closeTime = closeTime;
     }
 
-    public String getAreaName(){
+    public String getAreaName() {
         return areaName;
     }
 
-    public void setAreaName(String areaName){
+    public void setAreaName(String areaName) {
         this.areaName = areaName;
     }
 

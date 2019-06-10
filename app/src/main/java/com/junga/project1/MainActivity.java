@@ -12,13 +12,14 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final String TAG = "MainActivity";
 
     Button buttonInfo;
     Button buttonBest;
     ImageView mainTop;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -36,8 +37,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonInfo.setText("Korean\nTraditional\nDrinks");
 
         //Set animation
-        Animation slideInRight = AnimationUtils.loadAnimation(MainActivity.this,R.anim.slide_in_half_right);
-        Animation slideInLeft = AnimationUtils.loadAnimation(MainActivity.this,R.anim.slide_in_half_left);
+        Animation slideInRight = AnimationUtils.loadAnimation(MainActivity.this, R.anim.slide_in_half_right);
+        Animation slideInLeft = AnimationUtils.loadAnimation(MainActivity.this, R.anim.slide_in_half_left);
 
         mainTop.startAnimation(slideInRight);
         buttonInfo.startAnimation(slideInLeft);
@@ -48,15 +49,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        if(view.getId() == R.id.button_info){
-            Intent intent = new Intent(MainActivity.this,DrinksActivity.class);
+        if (view.getId() == R.id.button_info) {
+            Intent intent = new Intent(MainActivity.this, DrinksActivity.class);
             startActivity(intent);
-            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
 
-        } else if (view.getId() == R.id.button_best){
-            Intent intent = new Intent(MainActivity.this,PlaceActivity.class);
+        } else if (view.getId() == R.id.button_best) {
+            Intent intent = new Intent(MainActivity.this, PlaceActivity.class);
             startActivity(intent);
-            overridePendingTransition(R.anim.slide_in_right,R.anim.slide_out_left);
+            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         }
 
     }

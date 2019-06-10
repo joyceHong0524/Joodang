@@ -21,13 +21,13 @@ import java.util.ArrayList;
 
 import static android.support.constraint.Constraints.TAG;
 
-public class RecyclerViewAdpater extends RecyclerView.Adapter<RecyclerViewAdpater.MyViewHolder>{
+public class RecyclerViewAdpater extends RecyclerView.Adapter<RecyclerViewAdpater.MyViewHolder> {
 
     Context context;
     int place; //distinguish if it is from hongdae,gangnam or itaewon;
     ArrayList<RestaurantVO> restaurants;
 
-    public RecyclerViewAdpater(Context context,int place,ArrayList<RestaurantVO> restaurants) {
+    public RecyclerViewAdpater(Context context, int place, ArrayList<RestaurantVO> restaurants) {
         this.context = context;
         this.place = place;
         this.restaurants = restaurants;
@@ -36,7 +36,7 @@ public class RecyclerViewAdpater extends RecyclerView.Adapter<RecyclerViewAdpate
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row_restaurant,viewGroup,false);
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row_restaurant, viewGroup, false);
 
         return new MyViewHolder(view);
     }
@@ -58,8 +58,8 @@ public class RecyclerViewAdpater extends RecyclerView.Adapter<RecyclerViewAdpate
             @Override
             public void onClick(View view) {
                 //Going to pass this restuarant VO!!!
-                Intent intent = new Intent(context,PlaceBestInfoActivity.class);
-                intent.putExtra("restaurant",data);
+                Intent intent = new Intent(context, PlaceBestInfoActivity.class);
+                intent.putExtra("restaurant", data);
                 context.startActivity(intent);
 
             }
@@ -76,7 +76,7 @@ public class RecyclerViewAdpater extends RecyclerView.Adapter<RecyclerViewAdpate
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
         ImageView title_image;
-        TextView resName,resAttr,star,dongName,closeTime;
+        TextView resName, resAttr, star, dongName, closeTime;
         CardView view;
 
         public MyViewHolder(@NonNull final View itemView) {
@@ -94,7 +94,7 @@ public class RecyclerViewAdpater extends RecyclerView.Adapter<RecyclerViewAdpate
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    context.startActivity(new Intent(context,PlaceBestInfoActivity.class));
+                    context.startActivity(new Intent(context, PlaceBestInfoActivity.class));
 
                 }
             });

@@ -2,7 +2,7 @@
     <string name="app_name">Joodang</string>
 
 
-//    Drinks Info
+    // Drinks Info
 
     <string name="name_cheongju">Cheong Ju</string>
     <string name="name_soju">Soju</string>
@@ -25,7 +25,6 @@
     <string name="how_to_makgeolli">
 Makgeolli, like soju, uses three simple ingredients — rice, water and the traditional fermenting agent nuruk. Nuruk is a dry cake comprised of bacteria, wild yeasts and koji mould spores. Added to cooked sweet rice and water, this is left for around a week, and the nuruk acts to break down starch in the rice into sugar and then alcohol, producing a strong (15–19% ABV), sweet mixture called wonju. This is allowed to settle, and the top clear liquid separated. The resultant alcohol is cheonju, which was the drink of the Yangban (Korean aristocracy), and which can be distilled to make soju (as the eagle-eyed may have spotted, -ju in Korean means “alcohol”). The remaining settled sediment, also known as takju, is diluted with water, and roughly strained (but not filtered), to make makgeolli.</string>
     <string name="how_to_cheongju">Cheongju is usually brewed in winter, between the months of November and March. Steamed rice mixed with nuruk (fermentation starter) and water is left to ferment for 16 to 25 days, at a temperature not higher than 14–16 °C (57–61 °F). During the fermentation process, the rice starch becomes saccharified; the yeast fungi feed on the sugars created by saccharification and produce alcohol. The fermented wine is then filtered with yongsu (a wine strainer), which is dipped into the liquid. The clear wine inside the yongsu is ladled out to make cheongju.</string>
-
 
 
     <string name="food_with_soju">Like we said before, Soju is a drink for comfort and solidarity the same way you shouldn’t drink alone, you also shouldn’t just drink Soju.
