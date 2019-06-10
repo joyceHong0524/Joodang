@@ -3,9 +3,6 @@ package com.junga.project1;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -16,9 +13,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private static final String TAG = "MainActivity";
 
-    Button buttonInfo;
-    Button buttonBest;
-    ImageView mainTop;
+    private Button buttonInfo;
+    private Button buttonBest;
+    private ImageView mainTop;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,9 +23,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        buttonInfo = (Button) findViewById(R.id.button_info);
-        buttonBest = (Button) findViewById(R.id.button_best);
-        mainTop = (ImageView) findViewById(R.id.main_top);
+        buttonInfo = findViewById(R.id.button_info);
+        buttonBest = findViewById(R.id.button_best);
+        mainTop = findViewById(R.id.main_top);
 
         buttonInfo.setOnClickListener(this);
         buttonBest.setOnClickListener(this);
@@ -43,8 +40,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mainTop.startAnimation(slideInRight);
         buttonInfo.startAnimation(slideInLeft);
         buttonBest.startAnimation(slideInLeft);
-
-
     }
 
     @Override
@@ -53,7 +48,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(MainActivity.this, DrinksActivity.class);
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-
         } else if (view.getId() == R.id.button_best) {
             Intent intent = new Intent(MainActivity.this, PlaceActivity.class);
             startActivity(intent);

@@ -3,7 +3,6 @@ package com.junga.project1;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.view.PagerAdapter;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
@@ -29,10 +28,10 @@ public class CardPagerAdatper extends PagerAdapter implements CardAdapter {
     public final static int ITAEWON = 2;
 
 
-    private List<CardView> mViews;
+    private final List<CardView> mViews;
     private float mBaseElevation;
-    private int type; //In this case, it tells if it is from Drinks Activity or Place Activity.
-    private Context context;
+    private final int type; //In this case, it tells if it is from Drinks Activity or Place Activity.
+    private final Context context;
 
     public CardPagerAdatper(int type, Context context) {
         mViews = new ArrayList<>();
@@ -42,7 +41,6 @@ public class CardPagerAdatper extends PagerAdapter implements CardAdapter {
         }
         this.type = type;
         this.context = context;
-
     }
 
     @Override
@@ -73,7 +71,7 @@ public class CardPagerAdatper extends PagerAdapter implements CardAdapter {
 
         container.addView(view);
         bind(position, view);
-        CardView cardView = (CardView) view.findViewById(R.id.cardView);
+        CardView cardView = view.findViewById(R.id.cardView);
         if (mBaseElevation == 0) {
             mBaseElevation = cardView.getCardElevation();
         }
@@ -90,8 +88,8 @@ public class CardPagerAdatper extends PagerAdapter implements CardAdapter {
     }
 
     private void bind(int position, View view) {
-        ImageView imageView = (ImageView) view.findViewById(R.id.image);
 
+        ImageView imageView = view.findViewById(R.id.image);
 
         if (type == DRINK_CARD) {
             switch (position) {
@@ -171,5 +169,4 @@ public class CardPagerAdatper extends PagerAdapter implements CardAdapter {
             }
         }
     }
-
 }

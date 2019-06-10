@@ -1,7 +1,5 @@
 package com.junga.project1;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
@@ -14,7 +12,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -23,13 +20,11 @@ import java.util.Random;
 public class DrinksActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = "DrinksActivity";
 
-    ViewPager viewPager;
-    Button learnMore;
-    TextView goBack;
+    private ViewPager viewPager;
+    private Button learnMore;
+    private TextView goBack;
 
-    private CardPagerAdatper mCardAdapter;
-    private ShadowTransformer mCardShadowTransformer;
-    ConstraintLayout layout;
+    private ConstraintLayout layout;
 
 
     @Override
@@ -37,17 +32,17 @@ public class DrinksActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drinks);
 
-        viewPager = (ViewPager) findViewById(R.id.viewPager);
-        learnMore = (Button) findViewById(R.id.button4);
-        goBack = (TextView) findViewById(R.id.go_back);
-        layout = (ConstraintLayout) findViewById(R.id.layout);
+        viewPager = findViewById(R.id.viewPager);
+        learnMore = findViewById(R.id.button4);
+        goBack = findViewById(R.id.go_back);
+        layout = findViewById(R.id.layout);
 
         learnMore.setOnClickListener(this);
         goBack.setOnClickListener(this);
 
-        mCardAdapter = new CardPagerAdatper(CardPagerAdatper.DRINK_CARD, this);
+        CardPagerAdatper mCardAdapter = new CardPagerAdatper(CardPagerAdatper.DRINK_CARD, this);
 
-        mCardShadowTransformer = new ShadowTransformer(viewPager, mCardAdapter);
+        ShadowTransformer mCardShadowTransformer = new ShadowTransformer(viewPager, mCardAdapter);
         mCardShadowTransformer.enableScaling(true);
         viewPager.setPageTransformer(false, mCardShadowTransformer);
         viewPager.setOffscreenPageLimit(3);

@@ -3,7 +3,6 @@ package com.junga.project1;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.constraint.ConstraintLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -13,23 +12,19 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import java.util.Random;
-
-import jp.wasabeef.blurry.Blurry;
 
 public class PlaceActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final String TAG = "PlaceActivity";
 
-    ViewPager viewPager;
-    TextView top1;
-    TextView top2;
-    TextView goBack;
-    Button random;
+    private ViewPager viewPager;
+    private TextView top1;
+    private TextView top2;
+    private TextView goBack;
+    private Button random;
 
-    int clicked_page;
+    private int clicked_page;
 
 
     Button hongdae;
@@ -40,10 +35,10 @@ public class PlaceActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activitiy_place);
         viewPager = findViewById(R.id.viewPager);
 
-        top1 = (TextView) findViewById(R.id.top1);
-        top2 = (TextView) findViewById(R.id.top2);
-        goBack = (TextView) findViewById(R.id.go_back);
-        random = (Button) findViewById(R.id.random_pick);
+        top1 = findViewById(R.id.top1);
+        top2 = findViewById(R.id.top2);
+        goBack = findViewById(R.id.go_back);
+        random = findViewById(R.id.random_pick);
 
         goBack.setOnClickListener(this);
         random.setOnClickListener(this);

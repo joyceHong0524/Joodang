@@ -68,10 +68,10 @@ public class DrinksInfoActivity extends AppCompatActivity implements View.OnClic
         button3 = (Button) findViewById(R.id.button7);
 
         if (type == CardPagerAdatper.CHEONGJU) {
-            button3.setText("brand");
+            button3.setText(R.string.brand);
         }
         if (type == CardPagerAdatper.MAKGEOLLI) {
-            button3.setText("When?");
+            button3.setText(R.string.when);
         }
 
 

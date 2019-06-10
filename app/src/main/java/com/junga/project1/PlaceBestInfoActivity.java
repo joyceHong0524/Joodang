@@ -1,6 +1,5 @@
 package com.junga.project1;
 
-import android.content.ComponentName;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -8,7 +7,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -18,7 +16,6 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
@@ -28,9 +25,14 @@ public class PlaceBestInfoActivity extends AppCompatActivity implements OnMapRea
 
     private static final String TAG = "PlaceBestInfoActivity";
 
-    RestaurantVO resData;
-    ImageView titleImage;
-    TextView resName, star, resAddress, resOpenClose, resPrice, resDescription;
+    private RestaurantVO resData;
+    private ImageView titleImage;
+    private TextView resName;
+    private TextView star;
+    private TextView resAddress;
+    private TextView resOpenClose;
+    private TextView resPrice;
+    private TextView resDescription;
 
 
     @Override
@@ -40,13 +42,13 @@ public class PlaceBestInfoActivity extends AppCompatActivity implements OnMapRea
 
         resData = (RestaurantVO) getIntent().getSerializableExtra("restaurant");
 
-        titleImage = (ImageView) findViewById(R.id.title_image);
-        resName = (TextView) findViewById(R.id.res_name);
-        star = (TextView) findViewById(R.id.star);
-        resAddress = (TextView) findViewById(R.id.res_address);
-        resPrice = (TextView) findViewById(R.id.price);
-        resOpenClose = (TextView) findViewById(R.id.res_openclose);
-        resDescription = (TextView) findViewById(R.id.res_description);
+        titleImage = findViewById(R.id.title_image);
+        resName = findViewById(R.id.res_name);
+        star = findViewById(R.id.star);
+        resAddress = findViewById(R.id.res_address);
+        resPrice = findViewById(R.id.price);
+        resOpenClose = findViewById(R.id.res_openclose);
+        resDescription = findViewById(R.id.res_description);
 
         setView();
         setToolbar();
@@ -55,9 +57,10 @@ public class PlaceBestInfoActivity extends AppCompatActivity implements OnMapRea
         FragmentManager fragmentManager = getSupportFragmentManager();
         SupportMapFragment mapFragment = (SupportMapFragment) fragmentManager.findFragmentById(R.id.map);
 
-
-        mapFragment.getMapAsync(this);
-        Button button = (Button) findViewById(R.id.button);
+        if(mapFragment!=null){
+            mapFragment.getMapAsync(this);
+        }
+        Button button = findViewById(R.id.button);
         button.setOnClickListener(this);
 
     }
@@ -101,7 +104,7 @@ public class PlaceBestInfoActivity extends AppCompatActivity implements OnMapRea
     }
 
     private void setToolbar() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
 

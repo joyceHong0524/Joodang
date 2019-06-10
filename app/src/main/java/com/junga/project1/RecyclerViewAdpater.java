@@ -2,30 +2,24 @@ package com.junga.project1;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-import static android.support.constraint.Constraints.TAG;
-
 public class RecyclerViewAdpater extends RecyclerView.Adapter<RecyclerViewAdpater.MyViewHolder> {
 
-    Context context;
-    int place; //distinguish if it is from hongdae,gangnam or itaewon;
-    ArrayList<RestaurantVO> restaurants;
+    private final Context context;
+    private final int place; //distinguish if it is from hongdae,gangnam or itaewon;
+    private final ArrayList<RestaurantVO> restaurants;
 
     public RecyclerViewAdpater(Context context, int place, ArrayList<RestaurantVO> restaurants) {
         this.context = context;
@@ -61,11 +55,8 @@ public class RecyclerViewAdpater extends RecyclerView.Adapter<RecyclerViewAdpate
                 Intent intent = new Intent(context, PlaceBestInfoActivity.class);
                 intent.putExtra("restaurant", data);
                 context.startActivity(intent);
-
             }
         });
-
-
     }
 
     @Override
@@ -75,22 +66,23 @@ public class RecyclerViewAdpater extends RecyclerView.Adapter<RecyclerViewAdpate
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        ImageView title_image;
-        TextView resName, resAttr, star, dongName, closeTime;
-        CardView view;
+        final ImageView title_image;
+        final TextView resName;
+        final TextView resAttr;
+        final TextView star;
+        final TextView dongName;
+        final TextView closeTime;
+        final CardView view;
 
-        public MyViewHolder(@NonNull final View itemView) {
+        MyViewHolder(@NonNull final View itemView) {
             super(itemView);
-
-            view = (CardView) itemView.findViewById(R.id.layout);
-            title_image = (ImageView) itemView.findViewById(R.id.title_image);
-            resName = (TextView) itemView.findViewById(R.id.res_name);
-            resAttr = (TextView) itemView.findViewById(R.id.res_attr);
-            star = (TextView) itemView.findViewById(R.id.star);
-            dongName = (TextView) itemView.findViewById(R.id.dong_name);
-            closeTime = (TextView) itemView.findViewById(R.id.close_time);
-
-
+            view = itemView.findViewById(R.id.layout);
+            title_image = itemView.findViewById(R.id.title_image);
+            resName = itemView.findViewById(R.id.res_name);
+            resAttr = itemView.findViewById(R.id.res_attr);
+            star = itemView.findViewById(R.id.star);
+            dongName = itemView.findViewById(R.id.dong_name);
+            closeTime = itemView.findViewById(R.id.close_time);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
